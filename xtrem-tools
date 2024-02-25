@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Función para mostrar el banner
+mostrar_banner() {
+    echo -e "\e[1;31m"
+    echo "************************************"
+    echo "*          Xtrem-Tools             *"
+    echo "************************************"
+    echo -e "\e[0m"
+}
+
+# Función para mostrar el menú
+mostrar_menu() {
+    clear
+    mostrar_banner
+    echo "Elige la opción que quieres usar:"
+    echo "1- Scan"
+    echo "2- Hydra"
+    echo "3- Recon"
+    echo "4- Openvas"
+    echo "5- KillWifi"
+    echo "6- Fuzzing"
+    read -p "¿Cuál deseas usar? " opcion
+
+    case $opcion in
+        1) /home/mxr/scriptsB/scan.sh ;;  # Reemplaza con la ruta de tu script Scan
+        2) /home/mxr/scriptsB/hydra_kill.sh ;;  # Reemplaza con la ruta de tu script Hydra
+        3) /home/mxr/scriptsB/recon.sh ;;  # Reemplaza con la ruta de tu script Recon
+        4) /home/mxr/scriptsB/openvas.sh ;;  # Reemplaza con la ruta de tu script Openvas
+        5) /home/mxr/scriptsB/kill_wifi.sh ;;  # Reemplaza con la ruta de tu script KillWifi
+        6) /home/mxr/scriptsB/fuzzing.sh ;;  # Reemplaza con la ruta de tu script Fuzzing
+        *) echo "Opción no válida";;
+    esac
+}
+
+# Llamada a la función del menú
+mostrar_menu

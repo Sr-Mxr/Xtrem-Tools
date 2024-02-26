@@ -23,15 +23,16 @@ mostrar_menu() {
     read -p "¿Cuál deseas usar? " opcion
 
     case $opcion in
-        1) git clone https://github.com/Sr-Mxr/scan.git ;;  
-        2) git clone https://github.com/Sr-Mxr/BreakPass.git ;;  
-        3) git clone https://github.com/Sr-Mxr/recon.git ;;  
-        4) git clone https://github.com/Sr-Mxr/openvas.git ;;  
-        5) git clone https://github.com/Sr-Mxr/kill_wifi.git ;; 
-        6) git clone https://github.com/Sr-Mxr/fuzzing.git ;;  
+        1) git clone https://github.com/Sr-Mxr/scan.git && /bin/bash scan/scan.sh ;;  
+        2) git clone https://github.com/Sr-Mxr/BreakPass.git && /bin/bash BreakPass/hydra.sh ;;  
+        3) git clone https://github.com/Sr-Mxr/recon.git && /bin/bash recon/recon.sh ;;  
+        4) git clone https://github.com/Sr-Mxr/openvas.git && /bin/bash openvas/openvas.sh ;;  
+        5) git clone https://github.com/Sr-Mxr/kill_wifi.git && /bin/bash kill_wifi/kill_wifi.sh ;; 
+        6) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;;  
         *) echo "Opción no válida";;
     esac
 }
 
 # Llamada a la función del menú
 mostrar_menu
+

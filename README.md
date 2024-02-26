@@ -15,6 +15,6 @@ How to Use:
     Run Xtrem-Tools in your terminal.
     Navigate through the interactive console to choose the desired script.
     Execute the selected script seamlessly within the Xtrem-Tools environment.
-use "bash xtrem-tools.sh"
+
 
 Enhance your scripting experience with Xtrem-Tools, bringing efficiency and convenience to your Bash script management.

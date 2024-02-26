@@ -2,7 +2,7 @@
 
 # Función para mostrar el banner
 mostrar_banner() {
-    echo -e "\e[1;31m"
+    echo -e "\e[1;50m"
     echo "************************************"
     echo "*          Xtrem-Tools             *"
     echo "************************************"
@@ -19,17 +19,17 @@ mostrar_menu() {
     echo "3- Recon"
     echo "4- Openvas"
     echo "5- Fuzzing"
-    echo "6- Update"    
+    echo "6- Actualizar"    
     read -p "¿Cuál deseas usar? " opcion
 
     case $opcion in
-        1) git clone https://github.com/Sr-Mxr/scan.git && /bin/bash scan/scan.sh ;;  
-        2) git clone https://github.com/Sr-Mxr/BreakPass.git && /bin/bash BreakPass/hydra.sh ;;  
-        3) git clone https://github.com/Sr-Mxr/recon.git && /bin/bash recon/recon.sh ;;  
-        4) git clone https://github.com/Sr-Mxr/openvas.git && /bin/bash openvas/openvas.sh ;;  
-        5) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;;
+        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh ;;  
+        2) curl -O https://raw.githubusercontent.com/Sr-Mxr/BreakPass/master/hydra.sh && /bin/bash hydra.sh ;;  
+        3) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;  
+        4) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;  
+        5) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;; 
         6) git pull origin main ;;
-        *) echo "Opción no válida"
+        *) echo "Opción no válida";;
     esac
 }
 

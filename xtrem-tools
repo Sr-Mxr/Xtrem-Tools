@@ -18,8 +18,7 @@ mostrar_menu() {
     echo "2- Hydra"
     echo "3- Recon"
     echo "4- Openvas"
-    echo "5- KillWifi"
-    echo "6- Fuzzing"
+    echo "5- Fuzzing"
     read -p "¿Cuál deseas usar? " opcion
 
     case $opcion in
@@ -27,8 +26,7 @@ mostrar_menu() {
         2) git clone https://github.com/Sr-Mxr/BreakPass.git && /bin/bash BreakPass/hydra.sh ;;  
         3) git clone https://github.com/Sr-Mxr/recon.git && /bin/bash recon/recon.sh ;;  
         4) git clone https://github.com/Sr-Mxr/openvas.git && /bin/bash openvas/openvas.sh ;;  
-        5) git clone https://github.com/Sr-Mxr/kill_wifi.git && /bin/bash kill_wifi/kill_wifi.sh ;; 
-        6) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;;  
+        5) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;;  
         *) echo "Opción no válida";;
     esac
 }

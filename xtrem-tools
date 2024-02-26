@@ -23,12 +23,12 @@ mostrar_menu() {
     read -p "¿Cuál deseas usar? " opcion
 
     case $opcion in
-        1) /home/mxr/scriptsB/scan.sh ;;  # Reemplaza con la ruta de tu script Scan
-        2) /home/mxr/scriptsB/hydra_kill.sh ;;  # Reemplaza con la ruta de tu script Hydra
-        3) /home/mxr/scriptsB/recon.sh ;;  # Reemplaza con la ruta de tu script Recon
-        4) /home/mxr/scriptsB/openvas.sh ;;  # Reemplaza con la ruta de tu script Openvas
-        5) /home/mxr/scriptsB/kill_wifi.sh ;;  # Reemplaza con la ruta de tu script KillWifi
-        6) /home/mxr/scriptsB/fuzzing.sh ;;  # Reemplaza con la ruta de tu script Fuzzing
+        1) git clone https://github.com/Sr-Mxr/scan.git ;;  
+        2) git clone https://github.com/Sr-Mxr/BreakPass.git ;;  
+        3) git clone https://github.com/Sr-Mxr/recon.git ;;  
+        4) git clone https://github.com/Sr-Mxr/openvas.git ;;  
+        5) git clone https://github.com/Sr-Mxr/kill_wifi.git ;; 
+        6) git clone https://github.com/Sr-Mxr/fuzzing.git ;;  
         *) echo "Opción no válida";;
     esac
 }

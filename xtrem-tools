@@ -19,7 +19,7 @@ mostrar_menu() {
     echo "3- Recon"
     echo "4- Openvas"
     echo "5- Fuzzing"
-    echo "6- Actualizar"    
+    echo "6- Update"    
     read -p "¿Cuál deseas usar? " opcion
 
     case $opcion in

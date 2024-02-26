@@ -13,14 +13,14 @@ mostrar_banner() {
 mostrar_menu() {
     clear
     mostrar_banner
-    echo "Elige la opción que quieres usar:"
+    echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
     echo "1- Scan"
     echo "2- Hydra"
     echo "3- Recon"
     echo "4- Openvas"
     echo "5- Fuzzing"
     echo "6- Actualizar"    
-    read -p "¿Cuál deseas usar? " opcion
+    read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
     case $opcion in
         1) curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh ;;  

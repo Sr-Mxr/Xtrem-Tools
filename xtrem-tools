@@ -2,9 +2,9 @@
 
 # Función para mostrar el banner
 mostrar_banner() {
-    echo -e "\e[1;50m"
+    echo -e "\e[1;31m"
     echo "************************************"
-    echo "*          Xtrem-Tools             *"
+    echo "*      X T R E M - T O O L S       *"
     echo "************************************"
     echo -e "\e[0m"
 }

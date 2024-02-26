@@ -4,7 +4,9 @@
 mostrar_banner() {
     echo -e "\e[1;31m"
     echo "************************************"
+    echo "*                                  *"
     echo "*      X T R E M - T O O L S       *"
+    echo "*                                  *"
     echo "************************************"
     echo -e "\e[0m"
 }
@@ -15,20 +17,18 @@ mostrar_menu() {
     mostrar_banner
     echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
     echo "1- Scan"
-    echo "2- Hydra"
-    echo "3- Recon"
-    echo "4- Openvas"
-    echo "5- Fuzzing"
-    echo "6- Actualizar"    
+    echo "2- Recon"
+    echo "3- Openvas"
+    echo "4- Fuzzing"
+    echo "5- Actualizar"    
     read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
     case $opcion in
-        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh ;;  
-        2) curl -O https://raw.githubusercontent.com/Sr-Mxr/BreakPass/master/hydra.sh && /bin/bash hydra.sh ;;  
-        3) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;  
-        4) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;  
-        5) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;; 
-        6) git pull origin main ;;
+        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh ;;    
+        2) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;  
+        3) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;  
+        4) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;; 
+        5) git pull origin main ;;
         *) echo "Opción no válida";;
     esac
 }

@@ -27,9 +27,9 @@ mostrar_menu() {
         2) git clone https://github.com/Sr-Mxr/BreakPass.git && /bin/bash BreakPass/hydra.sh ;;  
         3) git clone https://github.com/Sr-Mxr/recon.git && /bin/bash recon/recon.sh ;;  
         4) git clone https://github.com/Sr-Mxr/openvas.git && /bin/bash openvas/openvas.sh ;;  
-        5) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;; 
-        6) git pull origin master ;; 
-        *) echo "Opción no válida";;
+        5) git clone https://github.com/Sr-Mxr/fuzzing.git && /bin/bash fuzzing/fuzzing.sh ;;
+        7) git pull origin main ;;
+        *) echo "Opción no válida"
     esac
 }
 

@@ -1,4 +1,5 @@
 
+   
 #!/bin/bash
 
 # Función para mostrar el banner
@@ -29,7 +30,7 @@ mostrar_menu() {
         echo "4- Fuzzing"
         echo "5- Actualizar"
         echo "6- Salir"
-        
+
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
         case $opcion in
@@ -42,12 +43,12 @@ mostrar_menu() {
             *) echo "Opción no válida";;
         esac
 
-        read -p $'\e[1;36mPresiona B para volver al menú principal o escribe 'C' para salir  \e[0m'regresar       
+        read -p $'\e[1;36mPresiona B para volver al menú principal o escribe "C" para salir  \e[0m' regresar
 
- if [ "$regresar" == "C" ]; then
+        if [ "$regresar" == "C" ]; then
             break
         fi
-    done 
+    done
 }
 
 # Llamada a la función del menú

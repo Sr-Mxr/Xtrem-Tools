@@ -5,11 +5,11 @@
 # Función para mostrar el banner
 mostrar_banner() {
     echo -e "\e[1;31m"
-    echo "************************************"
-    echo "*                                  *"
-    echo "*      X T R E M - T O O L S       *"
-    echo "*                                  *"
-    echo "************************************"
+    echo      "************************************"
+    echo      "*                                  *"
+    echo      "*      X T R E M - T O O L S       *"
+    echo      "*                                  *"
+    echo      "************************************"
     echo -e "\e[0m"
 }
 
@@ -43,7 +43,7 @@ mostrar_menu() {
             *) echo "Opción no válida";;
         esac
 
-        read -p $'\e[1;36mPresiona \e[1;31m"B" \e[0mpara volver al menú principal o escribe \e[1;31m"C" \e[0mpara salir: \e[0m' regresar
+        read -p $'\e[1;36mPresiona \e[1;31m"B" \e[0m para volver al menú principal o escribe \e[1;31m"C" \e[0m para salir: \e[0m' regresar
 
         if [ "$regresar" == "C" ]; then
             break

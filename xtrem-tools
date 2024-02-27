@@ -29,7 +29,7 @@ mostrar_menu() {
         echo "3- Openvas"
         echo "4- Fuzzing"
         echo "5- Actualizar"
-        echo "6- Salir"
+        echo -e "\e[1;31m6- Salir \e[0m"
 
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
@@ -43,7 +43,7 @@ mostrar_menu() {
             *) echo "Opción no válida";;
         esac
 
-        read -p $'\e[1;36mPresiona B para volver al menú principal o escribe "C" para salir  \e[0m' regresar
+        read -p $'\e[1;36mPresiona \e[1;31m"B" \e[0mpara volver al menú principal o escribe \e[1;31m"C" \e[0mpara salir\e[0m: ' regresar
 
         if [ "$regresar" == "C" ]; then
             break

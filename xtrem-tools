@@ -28,7 +28,7 @@ mostrar_menu() {
         echo "2- Recon"
         echo "3- Openvas"
         echo "4- Fuzzing"
-        echo "5- Actualizar"
+        echo -e "\e[1;32m5- Update \e[0m"
         echo -e "\e[1;31m6- Salir \e[0m"
 
         read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion

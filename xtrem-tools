@@ -42,8 +42,8 @@ mostrar_menu() {
             *) echo "Opción no válida";;
         esac
 
-        read -p $'\e[1;36mPresiona Enter para volver al menú principal o escribe 'salir' para salir: \e[0m' regresar
-        if [ "$regresar" == "salir" ]; then
+        read -p $'\e[1;36mPresiona B para volver al menú principal o escribe 'C' para salir: \e[0m' regresar
+        if [ "$regresar" == "C" ]; then
             break
         fi
     done

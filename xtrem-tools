@@ -46,8 +46,7 @@ mostrar_menu() {
         if [ "$regresar" == "C" ]; then
             break
         fi
-    done 
-\e[0m'regresar
+    done \e[0m'regresar
 }
 
 # Llamada a la función del menú

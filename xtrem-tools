@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Función para mostrar el banner
@@ -11,26 +12,41 @@ mostrar_banner() {
     echo -e "\e[0m"
 }
 
+# Función para el script Scan
+ejecutar_scan() {
+    curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh
+}
+
 # Función para mostrar el menú
 mostrar_menu() {
-    clear
-    mostrar_banner
-    echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
-    echo "1- Scan"
-    echo "2- Recon"
-    echo "3- Openvas"
-    echo "4- Fuzzing"
-    echo "5- Actualizar"    
-    read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
+    while true; do
+        clear
+        mostrar_banner
+        echo -e "\e[1;35mElige la opción que quieres usar:\e[0m"
+        echo "1- Scan"
+        echo "2- Recon"
+        echo "3- Openvas"
+        echo "4- Fuzzing"
+        echo "5- Actualizar"
+        echo "6- Salir"
+        
+        read -p $'\e[1;36m¿Cuál deseas usar? \e[0m' opcion
 
-    case $opcion in
-        1) curl -O https://raw.githubusercontent.com/Sr-Mxr/scan/master/scan.sh && /bin/bash scan.sh ;;    
-        2) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;  
-        3) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;  
-        4) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;; 
-        5) git pull origin main ;;
-        *) echo "Opción no válida";;
-    esac
+        case $opcion in
+            1) ejecutar_scan ;;
+            2) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;
+            3) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;
+            4) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;;
+            5) git pull origin main ;;
+            6) break ;;
+            *) echo "Opción no válida";;
+        esac
+
+        read -p "Presiona Enter para volver al menú principal o escribe 'salir' para salir: " regresar
+        if [ "$regresar" == "salir" ]; then
+            break
+        fi
+    done
 }
 
 # Llamada a la función del menú

@@ -27,7 +27,7 @@ mostrar_menu() {
         echo "1- Scan"
         echo "2- Recon"
         echo "3- Openvas"
-        echo "4- Fuzzing"
+        echo "4- BreakPass"
         echo -e "\e[1;32m5- Update \e[0m"
         echo -e "\e[1;31m6- Salir \e[0m"
 
@@ -37,7 +37,7 @@ mostrar_menu() {
             1) ejecutar_scan ;;
             2) curl -O https://raw.githubusercontent.com/Sr-Mxr/recon/master/recon.sh && /bin/bash recon.sh ;;
             3) curl -O https://raw.githubusercontent.com/Sr-Mxr/openvas/master/openvas.sh && /bin/bash openvas.sh ;;
-            4) curl -O https://raw.githubusercontent.com/Sr-Mxr/fuzzing/master/fuzzing.sh && /bin/bash fuzzing.sh ;;
+            4) curl -O https://raw.githubusercontent.com/Sr-Mxr/BreakPass/master/BreakPass.sh && /bin/bash BreakPass.sh ;;
             5) git pull origin main ;;
             6) break ;;
             *) echo "Opción no válida";;
